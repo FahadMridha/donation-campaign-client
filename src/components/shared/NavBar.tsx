@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
+import Image from 'next/image';
+import logoImage from '@/assets/7091363.jpg'
  
 export type NItem = {
     route :string,
@@ -57,7 +59,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" className='bg-black'> 
+    <AppBar position="static" className='bg-gray-300'> 
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -76,7 +78,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+           <Image src={logoImage} width={100} height={100} alt='logo'/>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -116,7 +118,7 @@ function NavBar() {
               <Box className="w-full text-center">
                 {navItems.map((item) => (
                   <Link key={item.pathname} href={item.pathname}>
-                    <Button className="text-red-600">{item.route}</Button>
+                    <Button className="text-red-400">{item.route}</Button>
                   </Link>
                 ))}
               </Box>
@@ -139,12 +141,12 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <Image src={logoImage} width={100} height={100} alt='logo'/>
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className="w-full text-center" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {navItems.map((item) => (
                   <Link key={item.pathname} href={item.pathname}>
-                    <Button className="text-white">{item.route}</Button>
+                    <Button className="text-red-400">{item.route}</Button>
                   </Link>
                 ))}
           </Box>
