@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { Container } from "@mui/material";
+import NavBar from "@/components/shared/NavBar";
+import Footer from "@/components/shared/Footer";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar/>
+        <Container className="min-h-screen">
+        {children}
+        </Container>
+        <Footer/>
+        </body>
     </html>
   );
 }
