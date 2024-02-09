@@ -1,31 +1,41 @@
-import React from 'react';
-import donation from "@/assets/donatision3.jpg"
-import Image from 'next/image';
+import React from "react";
+import bgImage from "@/assets/Rectangle 4281.png";
+import Image from "next/image";
 
 const Hero = () => {
-    return (
-        <div>
-                <section className="dark:bg-gray-800 dark:text-gray-100">
-	<div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-		<div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-			<Image src={donation} width={500} height={800} alt='donation image'/>
-		</div>
-		<div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-			<h1 className="text-5xl font-bold leadi sm:text-6xl">I Grow 
-				<span className="dark:text-violet-400"> By Helping</span> People In Need
-			</h1>
-			<p className="mt-6 mb-8 text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
-				<br  className="hidden md:inline lg:hidden" />turpis pulvinar, est scelerisque ligula sem
-			</p>
-			<div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-				<a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Suspendisse</a>
-				<a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-100">Malesuada</a>
-			</div>
-		</div>
-	</div>
+  return (
+    <div>
+<section className="relative dark:bg-gray-800 dark:text-gray-100">
+<Image
+  src={bgImage}
+  alt="Background Image"
+  layout="fill"
+  objectFit="full"
+  
+/>
+<div className="absolute inset-0 bg-white opacity-80"></div>
+  <div className="container mx-auto flex flex-col items-center relative px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
+    <h1 className="text-5xl font-bold sm:text-xl">
+      I Grow By Helping People In Need
+    </h1>
+    <div className="flex flex-wrap justify-center mt-8">
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="py-2 px-4 rounded-l-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:text-white"
+        />
+        <button className="bg-blue-500 text-white py-2 px-4 rounded-r-md">
+          {/* Assuming you have a bag icon, you can use an SVG or an icon library */}
+          🛍️ Search
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
-        </div>
-    );
+
+    </div>
+  );
 };
 
 export default Hero;

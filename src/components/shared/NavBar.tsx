@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import Image from 'next/image';
-import logoImage from '@/assets/7091363.jpg'
+import logoImage from '@/assets/Logo.png'
  
 export type NItem = {
     route :string,
@@ -29,10 +29,6 @@ const navItems :NItem[] = [
     {
       route: "Donation",
       pathname: "/donation",
-    },
-    {
-      route: "Category",
-      pathname: "/categories/news?category=all-news",
     },
     {
       route: "Statistics",
@@ -59,10 +55,9 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" className='bg-gray-300'> 
+    <AppBar position="static" className='bg-none'> 
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -124,7 +119,6 @@ function NavBar() {
               </Box>
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -141,7 +135,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            <Image src={logoImage} width={100} height={100} alt='logo'/>
+            <Image src={logoImage} width={300} height={300} alt='logo'/>
           </Typography>
           <Box className="w-full text-center" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {navItems.map((item) => (
