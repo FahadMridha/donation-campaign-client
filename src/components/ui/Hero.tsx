@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import bgImage from "@/assets/Rectangle 4281.png";
 import Image from "next/image";

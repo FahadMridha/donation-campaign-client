@@ -12,22 +12,14 @@ import { NItem } from './NavBar';
 
 const Footer = () => {
     const navItems :NItem[] = [
-        {
-          route: "Home",
-          pathname: "/",
-        },
-        {
-          route: "Donation",
-          pathname: "/donation",
-        },
-        {
-          route: "Category",
-          pathname: "/categories/news?category=all-news",
-        },
-        {
-          route: "Statistics",
-          pathname: "/statistics",
-        }
+      {
+        route: "Home",
+        pathname: "/",
+      },
+      {
+        route: "Donation",
+        pathname: "/donation",
+      },
       ];
     return (
         <Box className="bg-slate-900 px-2 py-10" >
