@@ -59,7 +59,7 @@ function NavBar({ session }: { session: any }) {
   };
 
   return (
-    <AppBar position="static" >
+    <Box className="w-full text-center" position="static" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -194,7 +194,7 @@ function NavBar({ session }: { session: any }) {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </Box>
   );
 }
 export default NavBar;
