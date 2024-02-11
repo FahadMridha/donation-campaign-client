@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
  
- const LatestProducts =async () => {
+ const LatestDonation =async () => {
     const { data: allDonations } = await getAllDonations();
 //   console.log(allDonations);
     return (
@@ -44,4 +44,4 @@ import React from 'react';
     );
  };
  
- export default LatestProducts;
+ export default LatestDonation;
