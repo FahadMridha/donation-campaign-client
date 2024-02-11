@@ -3,8 +3,8 @@ import * as React from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
 
 const data = [
-  { id: 0, value: 10, label: 'Total Donation' },
-  { id: 1, value: 15, label: 'Your Donation' },
+  { id: 0, value: 60, label: 'Total Donation' },
+  { id: 1, value: 25, label: 'Your Donation' },
 ];
 
 export default function DonationStatistics() {
