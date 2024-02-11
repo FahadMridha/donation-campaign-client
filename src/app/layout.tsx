@@ -7,6 +7,7 @@ import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/utils/authOptions";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <NavBar session={session ? true : false}/>
         <Container className="min-h-screen">
+        <Toaster position="top-center" />
         {children}
         </Container>
         <Footer/>

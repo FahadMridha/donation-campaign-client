@@ -59,7 +59,7 @@ function NavBar({ session }: { session: any }) {
   };
 
   return (
-    <Box className="w-full text-center" position="static" >
+    <Box  position="static" >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

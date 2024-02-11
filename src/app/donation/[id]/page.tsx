@@ -7,10 +7,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { getSingleDonation } from '@/utils/getSingleDonation';
 import Image from 'next/image';
-
+import { handleButtonClick } from '@/utils/toast';
 export default async function DonationDetailPage({params}:any) {
     const {data} = await getSingleDonation(params.id)
-    console.log(data);
+    // console.log(data);
+
+  
   return (
    <div className='flex justify-center mt-10 lg:mt-20'>
      <Card sx={{ maxWidth: 445 }}>
@@ -30,7 +32,9 @@ export default async function DonationDetailPage({params}:any) {
           />
           </CardMedia>
           <CardActions>
-        <Button variant="outlined" color="error" size="small">Donate $ {data.amount}</Button>
+        <Button 
+        onClick={handleButtonClick}
+        variant="outlined" color="error" size="small">Donate $ {data.amount}</Button>
       </CardActions>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
