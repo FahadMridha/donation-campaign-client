@@ -3,8 +3,7 @@ import React from 'react';
 
 const DonationPage = () => {
     return (
-        <div>
-            <h1>Donation page</h1>
+        <div className='my-10 lg:my20'>
             <AllDonationsList/>
         </div>
     );

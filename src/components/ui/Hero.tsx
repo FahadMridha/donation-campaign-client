@@ -25,7 +25,7 @@ const Hero = () => {
           placeholder="Search..."
           className="py-2 px-4 rounded-l-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:text-white"
         />
-        <button className="bg-blue-500 text-white py-2 px-4 rounded-r-md">
+        <button className="bg-red-500 text-white py-2 px-4 rounded-r-md">
           {/* Assuming you have a bag icon, you can use an SVG or an icon library */}
           🛍️ Search
         </button>
