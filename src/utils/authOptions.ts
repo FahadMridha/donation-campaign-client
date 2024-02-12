@@ -5,7 +5,7 @@ export const authOptions = {
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. "Sign in with...")
-      id: "irepair",
+      id: "donation",
       name: "Credentials",
       type: "credentials",
 
@@ -22,7 +22,7 @@ export const authOptions = {
             headers: { "Content-Type": "application/json" },
           });
           const { data } = await res.json();
-          console.log(data);
+          // console.log(data);
 
           // If no error and we have user data, return it
           if (res.ok && data) {
@@ -57,4 +57,7 @@ export const authOptions = {
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+        "signIn":"/login"
+  }
 };
